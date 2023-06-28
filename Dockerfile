@@ -8,7 +8,7 @@ RUN git clone https://github.com/hcji/PyFingerprint.git
 
 WORKDIR /root/PyFingerprint
 
-RUN conda env create -f ./env/pyfingerprint_env.yml
+RUN conda env create -f env/pyfingerprint_env.yml
 
 ENV PATH /opt/conda/envs/pyfingerprint/bin:$PATH
 
