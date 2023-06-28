@@ -33,7 +33,7 @@ docker build -t jupyter-pyfingerprint:latest .
 Kemudian, untuk menjalankan container dari image tersebut, gunakan perintah:
 
 ```bash
-docker run -it -p 8889:8888 jupyter-pyfingerprint:1.0
+docker run -it --rm -p 8889:8888 -v /home/ahmadfaisal/Documents/PKM-RE:/home/jovyan/work jupyter-pyfingerprint:1.0
 ```
 
 Setelah itu, klik link yang diberikan oleh jupyter. Link berbentuk seperti berikut:
