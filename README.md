@@ -24,16 +24,24 @@ Catatan: Apabila ada perubahan terhadap isi file dataset, wajib beri nama baru d
 
 ## Dockerfile
 
-File dengan nama `Dockerfile` merupakan file yang berisi perintah-perintah untuk membuat sebuah docker image baru (saat ini belum jadi). Untuk mem-_build_-nya, gunakan perintah berikut:
+File dengan nama `Dockerfile` merupakan file yang berisi perintah-perintah untuk membuat sebuah docker image baru. Untuk mem-_build_-nya, gunakan perintah berikut:
+
+### Docker Build
 
 ```bash
-docker build -t jupyter-pyfingerprint:latest .
+docker build -t conda-pyfingerprint:0.0 .
 ```
 
-Kemudian, untuk menjalankan container dari image tersebut, gunakan perintah:
+### Docker Pull from Registry
 
 ```bash
-docker run -it --rm -p 8889:8888 -v /home/ahmadfaisal/Documents/PKM-RE:/home/jovyan/work jupyter-pyfingerprint:1.0
+docker image pull fzl22/conda-pyfingerprint:0.0
+```
+
+Kemudian, untuk menjalankan container dari image tersebut, gunakan perintah di bawah ini di Windows Powershell (ganti path host ke path project anda):
+
+```bash
+docker run -it --rm -p 8888:8888 -v /home/ahmadfaisal/Documents/PKM-RE:/root/project conda-pyfingerprint:0.0
 ```
 
 Setelah itu, klik link yang diberikan oleh jupyter. Link berbentuk seperti berikut:
@@ -42,6 +50,6 @@ Setelah itu, klik link yang diberikan oleh jupyter. Link berbentuk seperti berik
 http://127.0.0.1:8888/lab?token=29c88118b379099f669716be8ab2c4fab6b479979c3edb9a
 ```
 
-Ganti port 8888 menjadi 8889.
-
 Dockerized jupyter lab siap dijalankan!
+
+**Note:** Pastikan bahwa tidak ada aplikasi lain yang berjalan di port 8888. Apabila ada, matikan aplikasi tersebut atau ganti portnya (ex: `-p 8889:8888`).
