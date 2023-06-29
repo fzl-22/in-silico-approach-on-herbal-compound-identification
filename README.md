@@ -29,13 +29,13 @@ File dengan nama `Dockerfile` merupakan file yang berisi perintah-perintah untuk
 ### Docker Build
 
 ```bash
-docker build -t conda-pyfingerprint:0.0 .
+docker build -t conda-pyfingerprint:2.0 .
 ```
 
 ### Docker Pull from Registry
 
 ```bash
-docker image pull fzl22/conda-pyfingerprint:0.0
+docker image pull fzl22/conda-pyfingerprint:2.0
 ```
 
 Kemudian, untuk menjalankan container dari image tersebut, gunakan perintah di bawah ini di Windows Powershell (ganti path host ke path project anda):
