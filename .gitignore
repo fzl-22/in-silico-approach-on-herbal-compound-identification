@@ -3,3 +3,4 @@ src/.ipynb_checkpoints
 cdk_pywrapper
 Dockerfile.*
 PyFingerprint
+.env
