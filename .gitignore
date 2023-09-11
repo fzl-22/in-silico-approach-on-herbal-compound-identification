@@ -1,6 +1,0 @@
-src/.ipynb_checkpoints
-.ipynb_checkpoints
-cdk_pywrapper
-Dockerfile.*
-PyFingerprint
-.env
