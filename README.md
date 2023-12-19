@@ -22,6 +22,16 @@ Catatan: Apabila ada perubahan terhadap isi file dataset, wajib beri nama baru d
 
 `ligand-smiles.27-juni-2023.csv`
 
+## Environment
+
+Environment lokal yang digunakan pada project ini dapat dibuat dari file `environment.yml` yang telah disediakan. Cukup jalankan perintah berikut:
+
+```bash
+conda env create -f environment.yml
+```
+
+Namun, apabila ingin menggunakan Docker, lanjut ke subbab berikutnya.
+
 ## Dockerfile
 
 File dengan nama `Dockerfile` merupakan file yang berisi perintah-perintah untuk membuat sebuah docker image baru. Untuk mem-_build_-nya, gunakan perintah berikut:
